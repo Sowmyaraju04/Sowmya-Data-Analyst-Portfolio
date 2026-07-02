@@ -647,11 +647,10 @@ section:first-of-type p {
   color: #ffffff !important;
 }
 
-.experience-card h3 {
-    colour : #000 !important
+.experience, .experience * {
+  color: #000000 !important;
 }
 
-.education-card h3 {
-    colour : #000000; !important
+.education, .education * {
+  color: #000000 !important;
 }
-
