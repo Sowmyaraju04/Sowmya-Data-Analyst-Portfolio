@@ -647,7 +647,9 @@ section:first-of-type p {
   color: #ffffff !important;
 }
 
-.experience * ,
-.education * {
-  color: #000000 !important;
+#experience h3,
+#experience h4,
+#education h3,
+#education h4 {
+    color: #000000 !important;
 }
