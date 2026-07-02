@@ -646,3 +646,10 @@ section:first-of-type h1,
 section:first-of-type p {
   color: #ffffff !important;
 }
+
+.experience h2,
+.experience h3,
+.education h2,
+.education h3 {
+  color: #000000 !important;
+}
