@@ -616,14 +616,26 @@ body::after{
     }
 }
 
+/* Headings (ONLY section titles) */
 h2, h3 {
   color: #ffffff !important;
 }
 
-p, li, span, strong {
+/* All content inside sections (keep BLACK) */
+.about p,
+.skills p,
+.experience p,
+.projects p,
+.education p,
+.certificates p,
+.resume p,
+.contact p,
+section p,
+div p {
   color: #000000 !important;
 }
 
+/* Intro section only (first section) */
 section:first-of-type h1,
 section:first-of-type p {
   color: #ffffff !important;
