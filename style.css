@@ -646,3 +646,17 @@ section:first-of-type p {
 #education h4 {
     color: #000000 !important;
 }
+
+
+.certificate-card h3 {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    color: #000000 !important;
+    background: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    padding: 15px;
+    margin: 0;
+}
