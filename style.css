@@ -498,3 +498,113 @@ html {
     color:#fff;
 }
 
+/* ===========================
+   Responsive Design
+=========================== */
+
+@media (max-width: 768px) {
+
+    /* Navbar */
+
+    .navbar{
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .nav-links{
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    /* Hero */
+
+    .hero{
+        padding: 50px 20px;
+    }
+
+    .hero-content{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image img{
+        width: 220px;
+        height: 220px;
+        margin-bottom: 25px;
+    }
+
+    .hero h1{
+        font-size: 2.2rem;
+    }
+
+    .hero h2{
+        font-size: 1.3rem;
+    }
+
+    .hero-description{
+        font-size: 1rem;
+    }
+
+    /* Hero Buttons */
+
+    .hero-buttons{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .hero-buttons .btn{
+        width: 100%;
+        max-width: 260px;
+        text-align: center;
+    }
+
+    /* About */
+
+    .about-card{
+        padding: 25px;
+    }
+
+    /* Skills */
+
+    .skills-container{
+        grid-template-columns: repeat(2,1fr);
+        gap:15px;
+    }
+
+    /* Experience */
+
+    .experience-card{
+        padding:25px;
+    }
+
+    /* Projects */
+
+    .projects-container{
+        grid-template-columns:1fr;
+    }
+
+    /* Certificates */
+
+    .certificates-container{
+        grid-template-columns:1fr;
+    }
+
+    /* Contact */
+
+    .contact-links{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    /* General */
+
+    section{
+        padding:60px 20px;
+    }
+
+}
+
