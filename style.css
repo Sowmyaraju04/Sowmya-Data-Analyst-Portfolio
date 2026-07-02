@@ -616,26 +616,15 @@ body::after{
     }
 }
 
-h1, h2, h3, p, strong {
+h2, h3 {
   color: #ffffff !important;
 }
 
-h1 {
-  margin-bottom: 10px;
+p, li, span, strong {
+  color: #000000 !important;
 }
 
-p {
-  line-height: 1.6;
-}
-
-body {
-  color: #ffffff;
-}
-
-
-/* Force hero/intro text to white */
 section:first-of-type h1,
-section:first-of-type h2,
 section:first-of-type p {
   color: #ffffff !important;
 }
