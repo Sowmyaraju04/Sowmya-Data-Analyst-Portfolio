@@ -500,10 +500,7 @@ html {
 /* ===========================
    Responsive Design
 =========================== */
-
 @media (max-width: 768px) {
-
-    /* Navbar */
 
     .navbar{
         flex-direction: column;
@@ -517,93 +514,63 @@ html {
         text-align: center;
     }
 
-    /* Hero */
-
-    .hero{
-        padding: 50px 20px;
-    }
-
-    .hero-content{
+    /* HERO FIX */
+    .hero-container{
         flex-direction: column;
         text-align: center;
+        gap: 30px;
     }
 
     .hero-image img{
         width: 220px;
         height: 220px;
-        margin-bottom: 25px;
     }
 
-    .hero h1{
-        font-size: 2.2rem;
-    }
-
-    .hero h2{
-        font-size: 1.3rem;
-    }
-
-    .hero-description{
-        font-size: 1rem;
-    }
-
-    /* Hero Buttons */
-
+    /* BUTTONS */
     .hero-buttons{
-        display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 15px;
     }
 
     .hero-buttons .btn{
         width: 100%;
         max-width: 260px;
-        text-align: center;
     }
 
-    /* About */
+    /* SKILLS FIX */
+    .skills-container{
+        flex-direction: column;
+        align-items: center;
+    }
 
-    .about-card{
+    /* EXPERIENCE */
+    .experience-card{
         padding: 25px;
     }
 
-    /* Skills */
-
-    .skills-container{
-        grid-template-columns: repeat(2,1fr);
-        gap:15px;
-    }
-
-    /* Experience */
-
-    .experience-card{
-        padding:25px;
-    }
-
-    /* Projects */
-
+    /* PROJECTS FIX */
     .projects-container{
-        grid-template-columns:1fr;
+        gap: 15px;
+        padding: 10px;
     }
 
-    /* Certificates */
-
-    .certificates-container{
-        grid-template-columns:1fr;
+    .project-card{
+        flex: 0 0 85%;
     }
 
-    /* Contact */
+    /* CERTIFICATIONS FIX */
+    .certifications-container{
+        grid-template-columns: 1fr;
+    }
 
+    /* CONTACT FIX */
     .contact-links{
-        flex-direction:column;
-        gap:15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
-
-    /* General */
 
     section{
-        padding:60px 20px;
+        padding: 60px 20px;
     }
-
 }
-
