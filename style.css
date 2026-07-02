@@ -619,3 +619,15 @@ body::after{
 h1, h2, h3, p, strong {
   color: #ffffff !important;
 }
+
+h1 {
+  margin-bottom: 10px;
+}
+
+p {
+  line-height: 1.6;
+}
+
+body {
+  color: #ffffff;
+}
