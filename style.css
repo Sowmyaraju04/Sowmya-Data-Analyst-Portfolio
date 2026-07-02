@@ -616,6 +616,6 @@ body::after{
     }
 }
 
-.section-title {
-  color: #eaeaea;
+h1, h2, h3, p, strong {
+  color: #ffffff !important;
 }
