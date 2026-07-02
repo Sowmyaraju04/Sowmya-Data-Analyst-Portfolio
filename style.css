@@ -647,9 +647,12 @@ section:first-of-type p {
   color: #ffffff !important;
 }
 
-.experience h2,
-.experience h3,
-.education h2,
-.education h3 {
+/* FORCE Experience text to BLACK */
+.experience * {
+  color: #000000 !important;
+}
+
+/* FORCE Education text to BLACK */
+.education * {
   color: #000000 !important;
 }
