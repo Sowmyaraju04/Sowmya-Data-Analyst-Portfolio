@@ -395,9 +395,14 @@ ul{
     cursor: pointer;
 }
 
-.certificate-card h3{
+.certificate-card h3 {
     padding: 15px;
     font-size: 18px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 /* ==========================
    Footer
