@@ -621,17 +621,23 @@ h2, h3 {
   color: #ffffff !important;
 }
 
-/* All content inside sections (keep BLACK) */
-.about p,
-.skills p,
-.experience p,
-.projects p,
-.education p,
-.certificates p,
-.resume p,
-.contact p,
+/* Section headings (About Me, Skills, etc.) */
+section h2,
+section h3 {
+  color: #ffffff !important;
+}
+
+/* All normal content inside sections (Experience, Education, Certificates, etc.) */
 section p,
-div p {
+section li,
+section span {
+  color: #000000 !important;
+}
+
+/* Extra strong fix for all content boxes */
+.experience *,
+.education *,
+.certificates * {
   color: #000000 !important;
 }
 
@@ -639,18 +645,4 @@ div p {
 section:first-of-type h1,
 section:first-of-type p {
   color: #ffffff !important;
-}
-
-
-/* Fix specific inner titles inside sections */
-.experience h3,
-.education h3 {
-  color: #000000 !important;
-}
-
-.certificates h2,
-.certificates h3,
-.certificates p,
-.certificates li {
-  color: #000000 !important;
 }
