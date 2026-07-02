@@ -24,8 +24,8 @@ html{
 ========================== */
 body{
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(180deg, #F8FAFC 0%, #EEF5FF 100%);
-    color: #222;
+    background: linear-gradient(135deg, #0f172a, #1e3a8a);
+    color: #1a1f2a;
 }
 /* ==========================
    Common Section
