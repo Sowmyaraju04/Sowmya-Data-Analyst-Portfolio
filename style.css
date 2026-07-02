@@ -648,10 +648,10 @@ section:first-of-type p {
 }
 
 .experience-card h3 {
-    colour : #000000;
+    colour : #000 !important
 }
 
 .education-card h3 {
-    colour : #000000;
+    colour : #000000; !important
 }
 
