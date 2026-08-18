@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title> Sowmya-Data Analyst Portfolio</title>
+    <title>Sowmya - Data Analyst Portfolio</title>
 
     <meta name="description"
         content="Sowmya P - Aspiring Data Analyst portfolio showcasing data analytics, business intelligence, Python, SQL, Excel, Power BI and AI projects.">
@@ -36,7 +36,9 @@
                 
             </div>
 
-            <ul class="nav-links">
+            <!-- Desktop Navigation -->
+            <ul class="nav-links" id="navLinks">
+
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
@@ -45,11 +47,33 @@
                 <li><a href="#education">Education</a></li>
                 <li><a href="#certifications">Certifications</a></li>
                 <li><a href="#contact">Contact</a></li>
+
             </ul>
 
-            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
-                <i class="fas fa-moon"></i>
-            </button>
+            <div class="nav-actions">
+
+                <!-- Dark / Light Mode -->
+                <button
+                    id="theme-toggle"
+                    class="theme-toggle"
+                    aria-label="Toggle dark mode">
+
+                    <i class="fas fa-moon"></i>
+
+                </button>
+
+                <!-- Mobile Menu -->
+                <button
+                    id="menu-toggle"
+                    class="menu-toggle"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false">
+
+                    <i class="fas fa-bars"></i>
+
+                </button>
+
+            </div>
 
         </nav>
     </header>
@@ -62,6 +86,8 @@
     <section id="home" class="hero-section">
 
         <div class="hero-container">
+
+            <!-- Hero Content -->
 
             <div class="hero-content">
 
@@ -85,41 +111,65 @@
                 <div class="hero-buttons">
 
                     <a href="#projects" class="btn btn-primary">
+
                         <i class="fas fa-chart-line"></i>
+
                         View Projects
+
                     </a>
 
-                    <a href="assests\resume\SOWMYA-RESUME.pdf"
+                    <a
+                        href="assests/resume/SOWMYA-RESUME.pdf"
                         class="btn btn-outline-primary"
                         download>
+
                         <i class="fas fa-download"></i>
+
                         Download Resume
+
                     </a>
 
                     <a href="#contact" class="btn btn-primary">
+
                         <i class="fas fa-envelope"></i>
+
                         Contact Me
+
                     </a>
 
                 </div>
 
+
+                <!-- Social Links -->
+
                 <div class="hero-socials">
 
-                    <a href="https://github.com/Sowmyaraju04"
+                    <a
+                        href="https://github.com/Sowmyaraju04"
                         target="_blank"
+                        rel="noopener noreferrer"
                         aria-label="GitHub">
+
                         <i class="fab fa-github"></i>
+
                     </a>
 
-                    <a href="https://www.linkedin.com/in/sowmya-raju21"
+                    <a
+                        href="https://www.linkedin.com/in/sowmya-raju21"
                         target="_blank"
+                        rel="noopener noreferrer"
                         aria-label="LinkedIn">
+
                         <i class="fab fa-linkedin"></i>
+
                     </a>
 
-                    <a href="mailto:sowmyapraju21@gmail.com"
+                    <a
+                        href="mailto:sowmyapraju21@gmail.com"
                         aria-label="Email">
+
                         <i class="fas fa-envelope"></i>
+
                     </a>
 
                 </div>
@@ -131,7 +181,8 @@
 
             <div class="hero-image">
 
-                <img src="assests\images\profile.jpeg"
+                <img
+                    src="assests/images/profile.jpeg"
                     alt="Sowmya P - Data Analyst">
 
             </div>
@@ -206,13 +257,13 @@
             </div>
 
             <div class="skill-card">
-                <i class="fab fa-js"></i>
+                <i class="fas fa-file-excel"></i>
                 Excel
             </div>
 
             <div class="skill-card">
-                <i class="fas fa-file-excel"></i>
-                PowerBI
+                <i class="fas fa-chart-bar"></i>
+                Power BI
             </div>
 
             <div class="skill-card">
@@ -348,8 +399,10 @@
                             Project Repository:
                         </strong>
 
-                        <a href="https://github.com/Sowmyaraju04/n8n_-AI_Agents"
-                            target="_blank">
+                        <a
+                            href="https://github.com/Sowmyaraju04/n8n_-AI_Agents"
+                            target="_blank"
+                            rel="noopener noreferrer">
 
                             <i class="fab fa-github"></i>
                             AI Agents Project
@@ -384,11 +437,10 @@
         </p>
 
 
-        <!-- Slider -->
-
         <div class="projects-slider-wrapper">
 
-            <button class="slider-btn slider-prev"
+            <button
+                class="slider-btn slider-prev"
                 id="prevProject"
                 aria-label="Previous projects">
 
@@ -397,16 +449,21 @@
             </button>
 
 
-            <div class="projects-container" id="projectsContainer">
+            <div
+                class="projects-container"
+                id="projectsContainer">
 
 
                 <!-- PROJECT 1 -->
 
-                <a href="https://github.com/Sowmyaraju04/AI-Powered-Customer-Retention-Intelligence-Platform"
+                <a
+                    href="https://github.com/Sowmyaraju04/AI-Powered-Customer-Retention-Intelligence-Platform"
                     class="project-card"
-                    target="_blank">
+                    target="_blank"
+                    rel="noopener noreferrer">
 
-                    <img src="assests\projects\project1.png"
+                    <img
+                        src="assests\projects\project1.png"
                         alt="AI-Powered Customer Retention Intelligence Platform">
 
                     <div class="project-content">
@@ -445,11 +502,14 @@
 
                 <!-- PROJECT 2 -->
 
-                <a href="https://github.com/Sowmyaraju04/E-Commerce-Sales-Customer-Analytics"
+                <a
+                    href="https://github.com/Sowmyaraju04/E-Commerce-Sales-Customer-Analytics"
                     class="project-card"
-                    target="_blank">
+                    target="_blank"
+                    rel="noopener noreferrer">
 
-                    <img src="assests\projects\project2.png"
+                    <img
+                        src="assests\projects\project2.png"
                         alt="E-Commerce Sales and Customer Analytics">
 
                     <div class="project-content">
@@ -488,11 +548,14 @@
 
                 <!-- PROJECT 3 -->
 
-                <a href="https://github.com/Sowmyaraju04/Exploratory-Data-Analysis-using-SQL"
+                <a
+                    href="https://github.com/Sowmyaraju04/Exploratory-Data-Analysis-using-SQL"
                     class="project-card"
-                    target="_blank">
+                    target="_blank"
+                    rel="noopener noreferrer">
 
-                    <img src="assests\projects\project3.png"
+                    <img
+                        src="assests\projects\project3.png"
                         alt="Exploratory Data Analysis using SQL">
 
                     <div class="project-content">
@@ -528,11 +591,14 @@
 
                 <!-- PROJECT 4 -->
 
-                <a href="https://github.com/Sowmyaraju04/Credit-Card-Transaction-Customer-Analytics"
+                <a
+                    href="https://github.com/Sowmyaraju04/Credit-Card-Transaction-Customer-Analytics"
                     class="project-card"
-                    target="_blank">
+                    target="_blank"
+                    rel="noopener noreferrer">
 
-                    <img src="assests\projects\project4.png"
+                    <img
+                        src="assests\projects\project4.png"
                         alt="Credit Card Transaction and Customer Analytics">
 
                     <div class="project-content">
@@ -570,11 +636,14 @@
 
                 <!-- PROJECT 5 -->
 
-                <a href="https://github.com/Sowmyaraju04/Coffee-Sales-Dashboard-using-EXCEL"
+                <a
+                    href="https://github.com/Sowmyaraju04/Coffee-Sales-Dashboard-using-EXCEL"
                     class="project-card"
-                    target="_blank">
+                    target="_blank"
+                    rel="noopener noreferrer">
 
-                    <img src="assests\projects\project5.png"
+                    <img
+                        src="assests\projects\project5.png"
                         alt="Coffee Sales Dashboard using Excel">
 
                     <div class="project-content">
@@ -611,11 +680,14 @@
 
                 <!-- PROJECT 6 -->
 
-                <a href="https://github.com/Sowmyaraju04/PrivacyChainApp"
+                <a
+                    href="https://github.com/Sowmyaraju04/PrivacyChainApp"
                     class="project-card"
-                    target="_blank">
+                    target="_blank"
+                    rel="noopener noreferrer">
 
-                    <img src="assests\projects\project6.png"
+                    <img
+                        src="assests\projects\project6.png"
                         alt="PrivacyChainApp">
 
                     <div class="project-content">
@@ -649,11 +721,11 @@
 
                 </a>
 
-
             </div>
 
 
-            <button class="slider-btn slider-next"
+            <button
+                class="slider-btn slider-next"
                 id="nextProject"
                 aria-label="Next projects">
 
@@ -664,14 +736,18 @@
         </div>
 
 
-        <!-- Slider indicators -->
-
-        <div class="slider-indicators" id="sliderIndicators"></div>
+        <div
+            class="slider-indicators"
+            id="sliderIndicators">
+        </div>
 
 
         <p class="slider-hint">
+
             <i class="fas fa-arrows-left-right"></i>
+
             Scroll or use the arrows to explore projects
+
         </p>
 
     </section>
@@ -690,7 +766,9 @@
         <div class="education-card">
 
             <div class="education-icon">
+
                 <i class="fas fa-graduation-cap"></i>
+
             </div>
 
             <h3>
@@ -708,13 +786,19 @@
             <div class="education-details">
 
                 <span>
+
                     <i class="fas fa-calendar"></i>
+
                     Graduated: 2026
+
                 </span>
 
                 <span>
+
                     <i class="fas fa-star"></i>
+
                     CGPA: 8.65
+
                 </span>
 
             </div>
@@ -741,10 +825,13 @@
 
             <div class="certificate-card">
 
-                <a href=https://www.udemy.com/certificate/UC-423c3c3a-e801-4841-9350-f9c05de9812d/
-                    target="_blank">
+                <a
+                    href="https://www.udemy.com/certificate/UC-423c3c3a-e801-4841-9350-f9c05de9812d/"
+                    target="_blank"
+                    rel="noopener noreferrer">
 
-                    <img src="assests\certificates\certificate1.jpeg"
+                    <img
+                        src="assests/certificates/certificate1.jpeg"
                         alt="Udemy Certificate">
 
                 </a>
@@ -758,53 +845,57 @@
 
             <!-- Certificate 2 -->
 
-            <div class="certificate-card">
-
-                <a href="CERTIFICATE_URL_2"
-                    target="_blank">
-
-                    <img src="assests\certificates\certificate2.jpeg"
-                        alt="Internship Certificate">
-
-                </a>
-
-                <h3>
-                    Internship Certificate
-                </h3>
-
-            </div>
-
-
-            <!-- Certificate 3 -->
-
-            <!-- Certificate 3 -->
-
 <div class="certificate-card">
 
-    <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/32A6DqtsbF7LbKdcq/NkaC7knWtjSbi6aYv_32A6DqtsbF7LbKdcq_MQki6qnR36KHSdR9S_1749399406985_completion_certificate.pdf"
+    <a href="assests/certificates/certificate2.jpeg"
        target="_blank"
        rel="noopener noreferrer">
 
-        <img src="assests\certificates\certificate3.jpeg"
-             alt="Data Analytics Certificate">
+        <img src="assests/certificates/certificate2.jpeg"
+             alt="Internship Certificate">
 
     </a>
 
     <h3>
-        Data Analytics Certificate
+        Internship Certificate
     </h3>
 
 </div>
+
+
+            <!-- Certificate 3 -->
+
+            <div class="certificate-card">
+
+                <a
+                    href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/32A6DqtsbF7LbKdcq/NkaC7knWtjSbi6aYv_32A6DqtsbF7LbKdcq_MQki6qnR36KHSdR9S_1749399406985_completion_certificate.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    <img
+                        src="assests/certificates/certificate3.jpeg"
+                        alt="Data Analytics Certificate">
+
+                </a>
+
+                <h3>
+                    Data Analytics Certificate
+                </h3>
+
+            </div>
 
 
             <!-- Certificate 4 -->
 
             <div class="certificate-card">
 
-                <a href=https://certx.in/certificate/27e0774f-467d-45de-9d54-33382f67ff0e1673304
-                    target="_blank">
+                <a
+                    href="https://certx.in/certificate/27e0774f-467d-45de-9d54-33382f67ff0e1673304"
+                    target="_blank"
+                    rel="noopener noreferrer">
 
-                    <img src="assests\certificates\certificate4.jpeg"
+                    <img
+                        src="assests/certificates/certificate4.jpeg"
                         alt="Microsoft Office Masters Certificate">
 
                 </a>
@@ -814,7 +905,6 @@
                 </h3>
 
             </div>
-
 
         </div>
 
@@ -834,7 +924,9 @@
         <div class="resume-card">
 
             <div class="resume-icon">
+
                 <i class="fas fa-file-lines"></i>
+
             </div>
 
             <p>
@@ -843,11 +935,13 @@
                 and analytics projects.
             </p>
 
-            <a href="assests\resume\SOWMYA-RESUME.pdf"
+            <a
+                href="assests/resume/SOWMYA-RESUME.pdf"
                 class="resume-btn"
                 download>
 
                 <i class="fas fa-download"></i>
+
                 Download Resume
 
             </a>
@@ -879,22 +973,29 @@
                 <a href="mailto:sowmyapraju21@gmail.com">
 
                     <i class="fas fa-envelope"></i>
+
                     Email
 
                 </a>
 
-                <a href="https://www.linkedin.com/in/sowmya-raju21"
-                    target="_blank">
+                <a
+                    href="https://www.linkedin.com/in/sowmya-raju21"
+                    target="_blank"
+                    rel="noopener noreferrer">
 
                     <i class="fab fa-linkedin"></i>
+
                     LinkedIn
 
                 </a>
 
-                <a href="https://github.com/Sowmyaraju04"
-                    target="_blank">
+                <a
+                    href="https://github.com/Sowmyaraju04"
+                    target="_blank"
+                    rel="noopener noreferrer">
 
                     <i class="fab fa-github"></i>
+
                     GitHub
 
                 </a>

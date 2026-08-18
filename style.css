@@ -10,6 +10,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 80px;
 }
 
 :root {
@@ -84,6 +85,8 @@ body {
     transition:
         background 0.3s ease,
         color 0.3s ease;
+
+    overflow-x: hidden;
 }
 
 a {
@@ -102,6 +105,7 @@ img {
 
 section {
     padding: 90px 8%;
+    scroll-margin-top: 80px;
 }
 
 .section-title {
@@ -149,6 +153,11 @@ section {
    NAVIGATION
 ========================================================= */
 
+header {
+    position: relative;
+    z-index: 1000;
+}
+
 .navbar {
 
     position: fixed;
@@ -172,6 +181,8 @@ section {
 
     backdrop-filter: blur(15px);
 
+    -webkit-backdrop-filter: blur(15px);
+
     border-bottom: 1px solid var(--border);
 
     z-index: 1000;
@@ -181,7 +192,7 @@ section {
 
 body[data-theme="dark"] .navbar {
 
-    background: rgba(15, 23, 42, 0.92);
+    background: rgba(15, 23, 42, 0.94);
 }
 
 .logo {
@@ -222,7 +233,17 @@ body[data-theme="dark"] .navbar {
     transform: translateY(-1px);
 }
 
-.theme-toggle {
+.nav-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.theme-toggle,
+.menu-toggle {
 
     width: 40px;
     height: 40px;
@@ -238,15 +259,27 @@ body[data-theme="dark"] .navbar {
     cursor: pointer;
 
     transition: 0.3s;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
 }
 
-.theme-toggle:hover {
+.theme-toggle:hover,
+.menu-toggle:hover {
 
     background: var(--primary);
 
     color: white;
 
-    transform: rotate(15deg);
+    transform: scale(1.05);
+}
+
+.menu-toggle {
+
+    display: none;
 }
 
 
@@ -398,6 +431,8 @@ body[data-theme="dark"] .navbar {
     display: inline-flex;
 
     align-items: center;
+
+    justify-content: center;
 
     gap: 8px;
 
@@ -1175,6 +1210,13 @@ body[data-theme="dark"] .navbar {
     box-shadow: var(--shadow-hover);
 }
 
+.certificate-card a {
+
+    display: block;
+
+    cursor: pointer;
+}
+
 .certificate-card img {
 
     width: 100%;
@@ -1182,6 +1224,15 @@ body[data-theme="dark"] .navbar {
     height: 200px;
 
     object-fit: cover;
+
+    transition: 0.3s;
+}
+
+.certificate-card a:hover img {
+
+    transform: scale(1.02);
+
+    opacity: 0.92;
 }
 
 .certificate-card h3 {
@@ -1238,6 +1289,8 @@ body[data-theme="dark"] .navbar {
     display: inline-flex;
 
     align-items: center;
+
+    justify-content: center;
 
     gap: 8px;
 
@@ -1384,10 +1437,15 @@ section.visible {
 
 
 /* =========================================================
-   RESPONSIVE
+   RESPONSIVE - TABLET
 ========================================================= */
 
 @media (max-width: 1100px) {
+
+    .navbar {
+
+        padding: 0 5%;
+    }
 
     .nav-links {
 
@@ -1412,21 +1470,106 @@ section.visible {
 }
 
 
+/* =========================================================
+   RESPONSIVE - MOBILE NAVIGATION
+========================================================= */
+
 @media (max-width: 850px) {
 
     .navbar {
 
-        padding: 0 4%;
+        height: 65px;
+
+        padding: 0 5%;
     }
 
     .logo {
 
-        font-size: 1.2rem;
+        font-size: 1.15rem;
+    }
+
+    .nav-actions {
+
+        margin-left: auto;
+    }
+
+    .menu-toggle {
+
+        display: flex;
     }
 
     .nav-links {
 
-        display: none;
+        position: absolute;
+
+        top: 65px;
+
+        left: 0;
+
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 0;
+
+        background: var(--card);
+
+        border-bottom: 1px solid var(--border);
+
+        box-shadow: var(--shadow);
+
+        padding: 10px 0;
+
+        opacity: 0;
+
+        visibility: hidden;
+
+        transform: translateY(-10px);
+
+        transition:
+            opacity 0.25s ease,
+            transform 0.25s ease,
+            visibility 0.25s ease;
+    }
+
+    .nav-links.active {
+
+        opacity: 1;
+
+        visibility: visible;
+
+        transform: translateY(0);
+    }
+
+    .nav-links li {
+
+        width: 100%;
+    }
+
+    .nav-links a {
+
+        display: block;
+
+        width: 100%;
+
+        padding: 13px 8%;
+
+        font-size: 0.95rem;
+
+        color: var(--text);
+    }
+
+    .nav-links a:hover {
+
+        background: rgba(37, 99, 235, 0.08);
+
+        color: var(--primary);
+
+        transform: none;
     }
 
     section {
@@ -1434,13 +1577,25 @@ section.visible {
         padding: 75px 5%;
     }
 
+    /* IMPORTANT:
+       Content comes FIRST.
+       Image comes SECOND.
+    */
+
     .hero-container {
 
-        flex-direction: column-reverse;
+        flex-direction: column;
 
         text-align: center;
 
         gap: 35px;
+
+        padding-top: 10px;
+    }
+
+    .hero-content {
+
+        width: 100%;
     }
 
     .hero-content h1 {
@@ -1473,37 +1628,105 @@ section.visible {
     .hero-image {
 
         flex: auto;
+
+        order: 2;
+    }
+
+    .hero-content {
+
+        order: 1;
     }
 
     .project-card {
 
         flex: 0 0 80%;
     }
+
+    .projects-slider-wrapper {
+
+        gap: 8px;
+    }
 }
 
 
+/* =========================================================
+   RESPONSIVE - SMALL MOBILE
+========================================================= */
+
 @media (max-width: 600px) {
+
+    html {
+
+        scroll-padding-top: 70px;
+    }
+
+    section {
+
+        scroll-margin-top: 70px;
+
+        padding: 65px 5%;
+    }
 
     .section-title {
 
         font-size: 1.9rem;
+
+        margin-bottom: 10px;
+    }
+
+    .section-subtitle {
+
+        font-size: 0.9rem;
+
+        margin-bottom: 30px;
+    }
+
+    /* HERO */
+
+    .hero-section {
+
+        min-height: auto;
+
+        padding-top: 105px;
+
+        padding-bottom: 70px;
+    }
+
+    .hero-container {
+
+        width: 100%;
+
+        gap: 30px;
+    }
+
+    .hero-intro {
+
+        font-size: 1rem;
+
+        margin-bottom: 7px;
     }
 
     .hero-content h1 {
 
         font-size: 2.5rem;
+
+        line-height: 1.15;
     }
 
     .hero-content h2 {
 
         font-size: 1.35rem;
+
+        margin-bottom: 15px;
     }
 
-    .hero-image img {
+    .hero-description {
 
-        width: 220px;
+        font-size: 0.92rem;
 
-        height: 280px;
+        line-height: 1.7;
+
+        margin-bottom: 25px;
     }
 
     .hero-buttons {
@@ -1511,77 +1734,284 @@ section.visible {
         flex-direction: column;
 
         align-items: center;
-    }
 
-    .btn {
-
-        width: 240px;
-
-        justify-content: center;
-    }
-
-    .skills-container {
+        width: 100%;
 
         gap: 10px;
     }
 
+    .btn {
+
+        width: min(260px, 100%);
+
+        justify-content: center;
+
+        padding: 12px 18px;
+
+        font-size: 0.9rem;
+    }
+
+    .hero-socials {
+
+        margin-top: 22px;
+
+        gap: 12px;
+    }
+
+    .hero-socials a {
+
+        width: 40px;
+        height: 40px;
+    }
+
+    .hero-image {
+
+        width: 100%;
+    }
+
+    .hero-image img {
+
+        width: 220px;
+
+        height: 280px;
+
+        border-width: 3px;
+    }
+
+
+    /* ABOUT */
+
+    .about-card {
+
+        padding: 25px 20px;
+    }
+
+    .about-card p {
+
+        font-size: 0.9rem;
+
+        line-height: 1.8;
+    }
+
+
+    /* SKILLS */
+
+    .skills-container {
+
+        gap: 9px;
+    }
+
     .skill-card {
 
-        font-size: 0.85rem;
+        font-size: 0.82rem;
 
-        padding: 9px 14px;
+        padding: 9px 12px;
     }
+
+
+    /* EXPERIENCE */
 
     .timeline-item {
 
-        padding-left: 45px;
+        padding-left: 38px;
     }
 
     .timeline::before {
 
-        left: 10px;
+        left: 8px;
     }
 
     .timeline-dot {
 
-        left: 0;
+        left: -1px;
+
+        width: 19px;
+
+        height: 19px;
     }
 
     .timeline-content {
 
-        padding: 25px;
+        padding: 22px 18px;
     }
 
-    .project-card {
+    .timeline-content h3 {
 
-        flex: 0 0 88%;
-
-        min-width: 280px;
+        font-size: 1.25rem;
     }
 
-    .slider-btn {
+    .timeline-content h4 {
 
-        width: 40px;
-
-        height: 40px;
+        font-size: 0.95rem;
     }
+
+    .timeline-content li {
+
+        font-size: 0.87rem;
+    }
+
+    .experience-links {
+
+        font-size: 0.85rem;
+    }
+
+    .experience-links a {
+
+        display: block;
+
+        margin-left: 0;
+
+        margin-top: 8px;
+    }
+
+
+    /* PROJECTS */
 
     .projects-slider-wrapper {
 
         gap: 5px;
     }
 
+    .projects-container {
+
+        gap: 15px;
+
+        padding: 15px 4px 25px;
+    }
+
+    .project-card {
+
+        flex: 0 0 88%;
+
+        min-width: 0;
+    }
+
+    .project-card img {
+
+        height: 190px;
+    }
+
+    .project-content {
+
+        padding: 20px;
+    }
+
+    .project-content h3 {
+
+        font-size: 1.1rem;
+    }
+
+    .project-content p {
+
+        font-size: 0.85rem;
+    }
+
+    .slider-btn {
+
+        width: 38px;
+
+        height: 38px;
+
+        font-size: 0.8rem;
+    }
+
+    .slider-hint {
+
+        font-size: 0.72rem;
+    }
+
+
+    /* EDUCATION */
+
+    .education-card {
+
+        padding: 28px 18px;
+    }
+
+    .education-card h3 {
+
+        font-size: 1.15rem;
+    }
+
+    .education-card h4 {
+
+        font-size: 0.95rem;
+    }
+
+    .education-institute {
+
+        font-size: 0.85rem;
+    }
+
+    .education-details {
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 10px;
+    }
+
+    .education-details span {
+
+        width: 100%;
+
+        font-size: 0.82rem;
+    }
+
+
+    /* CERTIFICATIONS */
+
     .certifications-container {
 
         grid-template-columns: 1fr;
+
+        gap: 20px;
     }
 
-    .education-card,
-    .resume-card,
-    .contact-card,
-    .about-card {
+    .certificate-card img {
 
-        padding: 28px 20px;
+        height: 220px;
+    }
+
+
+    /* RESUME / CONTACT */
+
+    .resume-card,
+    .contact-card {
+
+        padding: 30px 20px;
+    }
+
+    .resume-card p,
+    .contact-card p {
+
+        font-size: 0.88rem;
+    }
+
+    .contact-links {
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .contact-links a {
+
+        justify-content: center;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+
+        padding: 20px 15px;
+    }
+
+    footer p {
+
+        font-size: 0.78rem;
     }
 }
 
